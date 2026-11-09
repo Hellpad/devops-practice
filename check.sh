@@ -1,5 +1,5 @@
 #!/bin/bash
-LIMIT=80
+LIMIT=50
 USED=$(df / |tail -1 | awk '{print $5}' | tr -d '%')
 echo "Disk used: ${USED}%"
 if [ "$USED" -gt "$LIMIT" ]; then
